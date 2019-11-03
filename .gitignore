@@ -1,0 +1,9 @@
+
+# misc
+.DS_Store
+user.txt
+
+# pw
+/php/db.php
+/php/pw.php
+sftp-config.json
