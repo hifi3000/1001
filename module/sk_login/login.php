@@ -1,6 +1,6 @@
 <?
 
-if (isset($_GET['logins'])) {
+if (isset($_POST['passwort']) && !empty($_POST['passwort'])) {
   $email = $_POST['email'];
   $passwort = $_POST['passwort'];
 
@@ -18,6 +18,11 @@ if (isset($_GET['logins'])) {
   setcookie('login', $sha1, time() + (86400 * 30), "/");
   $_COOKIE['login'] = $sha1;
 
+  if (file_exists('./php/_default_cookie.php')) {
+    include './php/_default_cookie.php';
+  }
+
+  header("Location: /");
 }
 
 if (!isset($_COOKIE['login']) || ($_COOKIE['login'] !== $sha1)) {
