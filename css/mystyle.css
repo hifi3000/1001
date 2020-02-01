@@ -38,19 +38,6 @@ a {
   text-decoration: none;
   color: #C0B283;
 }
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  border: 1px solid #6C756B;
-}
-td, th {
-  border: 1px solid #6C756B;
-  text-align: left;
-  padding: 8px;
-}
-tr:nth-child(even) {
-  background-color: #e2e2e2;
-}
 
 .red {
   color: #B9090B;

@@ -2,6 +2,8 @@
 
 echo "<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'></script>";
 
+echo '<link rel="stylesheet" type="text/css" href="./module/sk_table/table.css">';
+
 echo "<script src='./module/sk_table/table.js'></script>";
 
 
