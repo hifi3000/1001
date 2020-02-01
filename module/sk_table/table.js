@@ -1,5 +1,7 @@
-$('.button').mouseup(function() { this.blur() })
-document.getElementById('tableToggle').style.display = "none";
+$(document).ready(function () {
+  $('.button').mouseup(function() { this.blur() })
+  document.getElementById('tableToggle').style.display = "none";
+});
 
 function selectElementContents(el) {
   var body = document.body, range, sel;
@@ -8,7 +10,6 @@ function selectElementContents(el) {
     sel = window.getSelection();
     sel.removeAllRanges();
     try {
-      console.log(el)
       range.selectNodeContents(el);
       sel.addRange(range);
     } catch (e) {

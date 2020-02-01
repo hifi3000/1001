@@ -31,13 +31,14 @@ require_once './module/sk_xpath/xpath.php';
   <title><? echo $title; ?></title>
   <link rel="icon" href="/media/favicon.png">
   <link rel="stylesheet" type="text/css" href="css/mystyle.css">
-  <script src="/js/selecttable.js"></script>
   <script src="/js/toggleMenu.js"></script>
 </head>
 
 <body>
 
 <?php
+
+require_once './module/sk_table/table.php';
 
 require_once './module/sk_warning/warning.php';
 

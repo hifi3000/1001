@@ -7,7 +7,7 @@ $result = queryFetch($sql);
 
 // preprint($result);
 
-echo build_table1($result);
+echo build_table($result);
 
 echo "<p />";
 echo "
