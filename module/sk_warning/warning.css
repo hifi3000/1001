@@ -1,0 +1,15 @@
+.warning {
+  font-family: Nunito;
+  border: solid 3px red;
+  border-radius: 5px;
+  color: red;
+  padding: 10px;
+  width: fit-content;
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}

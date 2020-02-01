@@ -1,9 +1,17 @@
 
 # misc
 .DS_Store
-user.txt
+
+# media
+/data/*
+/media/content
 
 # pw
 /php/db.php
+/php/db_strato.php
 /php/pw.php
+/php/__pw.php
+/php/oauth.php
 sftp-config.json
+/.vscode/sftp.json
+config.php

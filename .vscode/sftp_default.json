@@ -1,0 +1,11 @@
+{
+  "name": "weekinmusic",
+  "host": "s166.goserver.host",
+  "protocol": "ftp",
+  "port": 21,
+  "username": "web35",
+  "password": "xxxxx",
+  "remotePath": "/home/www/spacekit_sub/xxxxx/",
+  "uploadOnSave": true,
+  "ignore": [".vscode", ".gitignore"]
+}
