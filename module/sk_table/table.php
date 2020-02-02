@@ -1,24 +1,22 @@
 <?
 
-echo "<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'></script>";
-
 echo '<link rel="stylesheet" type="text/css" href="./module/sk_table/table.css">';
 
 echo "<script src='./module/sk_table/table.js'></script>";
 
 
 function toggleTable($buttonvalue) {
-  return '<p><input type="button" class="button" value="' . $buttonvalue . '" onclick="toggleMe(document.getElementById(\'tableToggle\'));"></p>';
+  return '<p><input type="button" class="button" value="' . $buttonvalue . '" onclick="toggleMe(document.getElementById(\'toggleTable\'));"></p>';
 }
 
 function build_table($array, $buttonvalue = 'toggle table'){
   $html = toggleTable($buttonvalue);
   $html .= '
-    <div id="tableToggle">
+    <div id="toggleTable">
     <p>
-      <input type="button" class="button" value="select table" onclick="selectElementContents(document.getElementById(\'myTable\'));">
-    </p>
-  ';
+      <input type="button" class="button" value="select table" onclick="selectElementContents(document.getElementById(\'myTable\'));this.blur();">';
+  $html .= "<input type=\"text\" id=\"myInput\" onkeyup=\"myFunction()\" placeholder=\"Search for title..\"></p>";
+
   $html .= '<table id="myTable">';
   $html .= '<thead><tr>';
   $i = "0";

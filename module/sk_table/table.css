@@ -13,3 +13,8 @@ td, th {
 tr:nth-child(even) {
   background-color: #545454;
 }
+
+#myInput {
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-left: 12px; /* Add some space below the input */
+}
