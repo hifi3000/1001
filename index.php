@@ -53,6 +53,8 @@ require_once './module/sk_navbar/navbar.php';
 
 <?php
 
+require_once './module/sk_dbedit/dbedit.php';
+
 include_once './php/default.php';
 
 ?>
