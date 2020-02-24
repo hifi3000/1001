@@ -1,5 +1,25 @@
 <?php
 
+function buildSet($post) {
+  $post = escapeStrings($post);
+
+  foreach ($post as $k => $v) {
+    $set[] = "`" . $k . "` = '" . $v . "'";
+  }
+  return implode(", ", $set);
+}
+
+function updateTable($table, $fields) {
+  $id = $fields['id'];
+  unset($fields['id']);
+
+  $set = buildSet($fields);
+  $sql = "UPDATE `$table` SET $set WHERE id = '$id';";
+
+  setQuery($sql);
+}
+
+
 function queryIdTable($id, $table) {
   global $mysqli;
 
