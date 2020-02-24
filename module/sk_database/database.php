@@ -32,7 +32,7 @@ function fetchResult($query) {
 
 function setQuery($sql) {
   global $mysqli;
-  if ($mysqli->query($sql) === TRUE) echo '';
+  if ($mysqli->query($sql) === TRUE) {}
   else queryError($sql);
 }
 
