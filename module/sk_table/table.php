@@ -10,12 +10,16 @@ function toggleTable($buttonvalue) {
 }
 
 function build_table($array, $buttonvalue = 'toggle table'){
+
+  $keys = array_keys($array[0]);
+  $filter = $keys[1];
+
   $html = toggleTable($buttonvalue);
   $html .= '
     <div id="toggleTable">
     <p>
       <input type="button" class="button" value="select table" onclick="selectElementContents(document.getElementById(\'myTable\'));this.blur();">';
-  $html .= "<input type=\"text\" id=\"myInput\" onkeyup=\"myFunction()\" placeholder=\"Search for title..\"></p>";
+  $html .= "<input type=\"text\" id=\"myInput\" onkeyup=\"myFunction()\" placeholder=\"Search for " . $filter . "..\"></p>";
 
   $html .= '<table id="myTable">';
   $html .= '<thead><tr>';
