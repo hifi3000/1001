@@ -17,7 +17,7 @@ function queryIdTable($id, $table) {
   return $result;
 }
 
-function displayForm($array, $inputName) {
+function displayForm($array, $inputName, $table) {
   echo "<form method='post' action='/?'>";
     echo "<table>";
 
@@ -36,6 +36,7 @@ function displayForm($array, $inputName) {
 
     echo "</table>";
 
+    echo "<input type='hidden' name='table' value='$table'>";
     echo "<input type='submit' name='$inputName' value='update'>";
   echo "</form>";
 
