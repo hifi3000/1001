@@ -25,8 +25,16 @@ require_once './module/sk_dbedit/dbedit.php';
 
 
 if (isset($_POST['updateEntry'])) {
-  preprint($_POST);
-  die;
+  $post = $_POST;
+
+  $table = $_POST['table'];
+  unset($post['table']);
+
+  unset($post['updateEntry']);
+
+  updateTable($table, $post);
+
+  header("Location: /");
 }
 
 ?>
