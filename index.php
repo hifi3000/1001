@@ -23,6 +23,12 @@ require_once './module/sk_xpath/xpath.php';
 
 require_once './module/sk_dbedit/dbedit.php';
 
+
+if (isset($_POST['updateEntry'])) {
+  preprint($_POST);
+  die;
+}
+
 ?>
 
 <!DOCTYPE HTML>
@@ -57,7 +63,7 @@ require_once './module/sk_navbar/navbar.php';
 
 if (isset($_GET['dbedit'])) {
   $result = queryIdTable($_GET['dbid'], $_GET['dbedit']);
-  displayForm($result, 'updateEntry');
+  displayForm($result, 'updateEntry', $_GET['dbedit']);
   die;
 }
 
