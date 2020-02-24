@@ -21,6 +21,8 @@ require_once './module/sk_spotify/spotify.php';
 
 require_once './module/sk_xpath/xpath.php';
 
+require_once './module/sk_dbedit/dbedit.php';
+
 ?>
 
 <!DOCTYPE HTML>
@@ -53,7 +55,11 @@ require_once './module/sk_navbar/navbar.php';
 
 <?php
 
-require_once './module/sk_dbedit/dbedit.php';
+if (isset($_GET['dbedit'])) {
+  $result = queryIdTable($_GET['dbid'], $_GET['dbedit']);
+  displayForm($result, 'updateEntry');
+  die;
+}
 
 include_once './php/default.php';
 
