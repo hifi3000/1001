@@ -3,6 +3,7 @@ table {
   border-collapse: collapse;
   border: 1px solid #6C756B;
   margin: 1rem 0;
+  width: 100%;
 }
 
 td, th {
@@ -15,7 +16,29 @@ tr:nth-child(even) {
   background-color: #545454;
 }
 
+table textarea {
+  width: 100%;
+}
+
 #myInput {
   border: 1px solid #ddd; /* Add a grey border */
   margin-left: 12px; /* Add some space below the input */
+}
+
+@media (max-width: 700px) {
+  table {
+    width: 100%;
+  }
+  th {
+    display: none;
+  }
+  td {
+    display: block;
+  }
+  td:before {
+    content: attr(data-th)": ";
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+  }
 }
