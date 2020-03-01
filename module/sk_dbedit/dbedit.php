@@ -43,11 +43,11 @@ function displayForm($array, $inputName, $table) {
 
     foreach ($array as $k => $v) {
       echo "<tr>";
-        echo "<td>";
+        echo "<th>";
           echo $k;
-        echo "</td>";
-        echo "<td>";
-          echo "<textarea name=\"$k\" cols=\"50\" rows=\"1\">";
+        echo "</th>";
+        echo "<td data-th='" . $k . "'>";
+          echo "<textarea name=\"$k\">";
             echo $v;
           echo "</textarea>";
         echo "</td>";
