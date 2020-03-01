@@ -1,7 +1,7 @@
 <?
 
 
-$sql = "SELECT * FROM m_movie;";
+$sql = "SELECT * FROM m_movie LIMIT 10;";
 
 $result = queryFetch($sql);
 
