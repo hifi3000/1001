@@ -1,5 +1,7 @@
 function selectElementContents(el) {
-  var body = document.body, range, sel;
+  var body = document.body,
+    range,
+    sel;
   if (document.createRange && window.getSelection) {
     range = document.createRange();
     sel = window.getSelection();
@@ -8,12 +10,11 @@ function selectElementContents(el) {
       range.selectNodeContents(el);
       sel.addRange(range);
     } catch (e) {
-      console.log('that')
+      console.log("that");
       range.selectNode(el);
       sel.addRange(range);
     }
-  }
-  else if (body.createTextRange) {
+  } else if (body.createTextRange) {
     range = body.createTextRange();
     range.moveToElementText(el);
     range.select();
@@ -24,8 +25,7 @@ function toggleMe(tab) {
   var x = tab;
   if (x.style.display === "none") {
     x.style.display = "";
-  }
-  else {
+  } else {
     x.style.display = "none";
   }
 }
@@ -33,7 +33,7 @@ function toggleMe(tab) {
 function myFunction() {
   // Declare variables
   var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
+  input = document.getElementById("filterInput");
   filter = input.value.toUpperCase();
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");

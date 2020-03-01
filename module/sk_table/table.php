@@ -19,7 +19,7 @@ function build_table($array, $buttonvalue = 'toggle table'){
     <div id="toggleTable">
     <p>
       <input type="button" class="button" value="select table" onclick="selectElementContents(document.getElementById(\'myTable\'));this.blur();">';
-  $html .= "<input type=\"text\" id=\"myInput\" onkeyup=\"myFunction()\" placeholder=\"Search for " . $filter . "..\"></p>";
+  $html .= "<input type=\"text\" id=\"filterInput\" onkeyup=\"myFunction()\" placeholder=\"Search for " . $filter . "..\"></p>";
 
   $html .= '<table id="myTable">';
   $html .= '<thead><tr>';

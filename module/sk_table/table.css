@@ -14,6 +14,7 @@ th {
 }
 
 tr:nth-child(even) {
+  /* background-color: #e2e2e2; */
   background-color: #545454;
 }
 
@@ -21,24 +22,38 @@ table textarea {
   width: 100%;
 }
 
-#myInput {
-  border: 1px solid #ddd; /* Add a grey border */
-  margin-left: 12px; /* Add some space below the input */
+table a {
+  /* color: #9c0002; */
+  color: #c0b283;
+  width: 100%;
+}
+
+#filterInput {
+  border: 1px solid #ddd;
+  margin-left: 12px;
 }
 
 @media (max-width: 700px) {
   table {
-    width: 100%;
+    border: none;
   }
+
+  tr {
+    border: 1px solid #6c756b;
+  }
+
   th {
     display: none;
+    border: none;
   }
+
   td {
     display: block;
+    border: none;
   }
+
   td:before {
     content: attr(data-th) ": ";
     font-weight: bold;
-    margin-bottom: 8px;
   }
 }
