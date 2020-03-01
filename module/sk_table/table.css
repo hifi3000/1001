@@ -1,13 +1,14 @@
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  border: 1px solid #6C756B;
+  border: 1px solid #6c756b;
   margin: 1rem 0;
   width: 100%;
 }
 
-td, th {
-  border: 1px solid #6C756B;
+td,
+th {
+  border: 1px solid #6c756b;
   text-align: left;
   padding: 8px;
 }
@@ -36,9 +37,8 @@ table textarea {
     display: block;
   }
   td:before {
-    content: attr(data-th)": ";
+    content: attr(data-th) ": ";
     font-weight: bold;
-    display: block;
     margin-bottom: 8px;
   }
 }
