@@ -25,15 +25,15 @@ function build_table($array, $buttonvalue = 'toggle table'){
   $html .= '<thead><tr>';
   $i = "0";
   foreach ($array[0] as $key => $value) {
-    $html .= '<th onclick="sortTable('.$i.')">'.htmlspecialchars($key).'</th>';
+    $html .= '<th onclick="sortTable(' . $i . ')">'.htmlspecialchars($key).'</th>';
     $i++;
   }
   $html .= '</tr></thead>';
 
   foreach ($array as $key => $value) {
     $html .= '<tr>';
-    foreach($value as $key2=>$value2){
-      $html .= '<td>'.$value2.'</td>';
+    foreach ($value as $key2 => $value2) {
+      $html .= '<td data-th="' . $key2 . '">' . $value2 . '</td>';
     }
     $html .= '</tr>';
   }
